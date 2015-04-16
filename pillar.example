@@ -1,0 +1,5 @@
+ssmtp:
+  root: yourrealemail@example.com
+  mailhub: mail.example.com
+  rewriteDomain: example.com
+  hostname: _HOSTNAME_

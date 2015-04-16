@@ -1,0 +1,9 @@
+{% from "ssmtp/map.jinja" import ssmtp with context %}
+
+sendmail	{{ ssmtp.ssmtp_path }}
+send-mail	{{ ssmtp.ssmtp_path }}
+mailq		{{ ssmtp.ssmtp_path }}
+newaliases	{{ ssmtp.ssmtp_path }}
+hoststat	{{ ssmtp.true_path }}
+purgestat	{{ ssmtp.true_path }}
+
