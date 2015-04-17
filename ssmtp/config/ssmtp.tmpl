@@ -1,6 +1,7 @@
 {% set ssmtp = salt['pillar.get']('ssmtp', {}) -%}
+{% set myhostname = salt['network.get_hostname']() -%}
 root={{ ssmtp.get('root', 'yourrealemail@example.com') }}
 mailhub={{ ssmtp.get('mailhub','mail.example.com') }}
 rewriteDomain={{ ssmtp.get('rewriteDomain','example.com') }}
-hostname={{ ssmtp.get('hostname', salt.network.get_hostname() ) }}
+hostname={{ ssmtp.get('hostname',myhostname) }}
 
