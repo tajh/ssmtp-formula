@@ -1,6 +1,6 @@
 {% set server = salt['pillar.get']('ssmtp', {}) -%}
-root={{ nrpe.get('root', 'yourrealemail@example.com') }}
-mailhub={{ nrpe.get('mailhub','mail.example.com') }}
-rewriteDomain={{ nrpe.get('rewriteDomain','example.com') }}
-hostname={{ nrpe.get('hostname','_HOSTNAME_') }}
+root={{ ssmtp.get('root', 'yourrealemail@example.com') }}
+mailhub={{ ssmtp.get('mailhub','mail.example.com') }}
+rewriteDomain={{ ssmtp.get('rewriteDomain','example.com') }}
+hostname={{ ssmtp.get('hostname','_HOSTNAME_') }}
 
