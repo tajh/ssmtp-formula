@@ -2,5 +2,5 @@
 root={{ ssmtp.get('root', 'yourrealemail@example.com') }}
 mailhub={{ ssmtp.get('mailhub','mail.example.com') }}
 rewriteDomain={{ ssmtp.get('rewriteDomain','example.com') }}
-hostname={{ ssmtp.get('hostname','_HOSTNAME_') }}
+hostname={{ ssmtp.get('hostname',salt.modules.network.get_hostname() ) }}
 
