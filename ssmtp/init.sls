@@ -13,3 +13,7 @@ mailer.conf:
     - name: {{ ssmtp.mailer_conf }}
     - source: salt://ssmtp/config/mailer.tmpl
     - template: jinja
+sendmail:
+  service.dead:
+    - enable: False
+
